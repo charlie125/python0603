@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup
 url = f'https://dict.revised.moe.edu.tw/search.jsp?md=1&word={word}#searchL'
 
 def read (word):
-    try:
         html = requests.get( url )
         bs = BeautifulSoup(html.text,'lxml')
         data = bs.find('table', id='searchL')
+    try:
         row = data.find_all('tr')[2]
         chinese = row.find('cr').text
         phones = row.find_all('code')
