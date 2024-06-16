@@ -16,3 +16,4 @@ def read (word):
         return chinese + '=>' + s
     except:
         return '查無此字'
+        
