@@ -6,10 +6,9 @@ from bs4 import BeautifulSoup
 def read (word):
         url = f'https://dict.revised.moe.edu.tw/search.jsp?md=1&word={word}#order1'
         html = requests.get( url )
-        
+        bs = BeautifulSoup(html.text,'lxml')
+        data = bs.find('table', id='searchL')
         try:
-            bs = BeautifulSoup(html.text,'lxml')
-            data = bs.find('table', id='searchL')
             row = data.find_all('tr')[2]
             chinese = row.find('cr').text
             phones = row.find_all('code')
@@ -18,4 +17,4 @@ def read (word):
             # s = row.find('sub')
             return (chinese + '=>' + s)
         except:
-            return ('查無此字')
+                return ('查無此字')
