@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[13]:
-
-
 import requests
 from bs4 import BeautifulSoup
 #word = input( '請輸入中文字:' )
@@ -25,4 +19,3 @@ def read (word):
             return (chinese + '=>' + s)
         except:
             return ('查無此字')
-
