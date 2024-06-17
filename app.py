@@ -16,7 +16,6 @@
 import os
 import sys
 import Python1 as ph
-from argparse import ArgumentParser
 
 from flask import Flask, request, abort
 from linebot import (
