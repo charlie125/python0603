@@ -15,7 +15,7 @@
 
 import os
 import sys
-import Python1.py
+import Python1
 from argparse import ArgumentParser
 
 from flask import Flask, request, abort
