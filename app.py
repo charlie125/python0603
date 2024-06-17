@@ -15,7 +15,7 @@
 
 import os
 import sys
-import Python1 as ph
+import Python2 as ph
 
 from flask import Flask, request, abort
 from linebot import (
