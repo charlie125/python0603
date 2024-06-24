@@ -9,7 +9,7 @@ def read (word):
     try:
         english = data.find_all('li')
         en = [e.text for e in english]
-        sen = ' '.join(en)
+        sen = ' \n '.join(en)
         return( sen )
     except:
         return("Error404")
