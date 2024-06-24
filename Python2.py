@@ -9,7 +9,6 @@ def read (word):
     try:
         english = data.find_all('li')
         en = [e.text for e in english]
-        return( "例句：" )
         return( en )
     except:
         return("Error404")
