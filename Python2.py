@@ -9,7 +9,7 @@ def read(word):
     try:
         english = data.find_all('li')
         en = [e.text for e in english]
-        sen = '\n'.join(en)  # 使用 "\n" 換行符號來連接翻譯結果
+        sen = '\n\n'.join(en)  # 使用 "\n" 換行符號來連接翻譯結果
         return sen
     except AttributeError:
         return "Error404"
